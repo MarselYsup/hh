@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="20220323_init_db.xml" relativeToChangelogFile="true"/>
+    <include file="20220406_add_security_entity.xml" relativeToChangelogFile="true"/>
+    <include file="20220406_insert_data_for_security.xml" relativeToChangelogFile="true"/>
+    <include file="20220413_alter_table_user_account.xml" relativeToChangelogFile="true"/>
+    <include file="20220510_insert_data_area_of_activity.xml" relativeToChangelogFile="true"/>
+    <include file="20220517_insert_data_for_skills.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

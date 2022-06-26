@@ -1,0 +1,43 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="Yusupov Marsel" id="001">
+        <insert tableName="user_account">
+            <column name="role" value="EMPLOYEE"/>
+            <column name="email" value="marsel@mail.ru"/>
+            <column name="status" value="CONFIRMED"/>
+            <column name="password" value="$2a$12$0Y1ZaFRMs99OgdAdYvbr5e4DhYL87Bm.J2xM.SRT6W1X3kGATiaY."/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="Yusupov Marsel" id="002">
+        <insert tableName="user_account">
+            <column name="role" value="COMPANY"/>
+            <column name="email" value="fedor@mail.ru"/>
+            <column name="status" value="CONFIRMED"/>
+            <column name="password" value="$2a$12$RH8axE2f9RrrzOCQZh2KU.gnzW/odkPbnIXdmjuwm6aKUDiG5DTwS"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="Yusupov Marsel" id="003">
+        <insert tableName="user_account">
+            <column name="role" value="EMPLOYEE"/>
+            <column name="email" value="abc@mail.ru"/>
+            <column name="status" value="CONFIRMED"/>
+            <column name="password" value="$2a$12$3/unZl/8SD0oQYZtYu4BpeTS/b.X4qOEe.ywRdF1f7Ej1HKbFJNui"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="Yusupov Marsel" id="004">
+        <insert tableName="user_account">
+            <column name="role" value="COMPANY"/>
+            <column name="email" value="xyz@mail.ru"/>
+            <column name="status" value="CONFIRMED"/>
+            <column name="password" value="$2a$12$O6bJgZ6YaFfyNriPT1kJjO9Sf5Gu0LYNDcbl2k/Gmm9cQFpVNhY2O"/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>

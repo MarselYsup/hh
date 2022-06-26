@@ -1,0 +1,339 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="Yusupov Marsel" id="001">
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Auto mechanic"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Car washer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Sales manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Service advisor"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Administrator"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Courier"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Interpreter"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Office manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="PC operator"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Secretary"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Police officer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Security guard"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Security specialist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Chief Commercial Officer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Chief Financial Officer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Chief Information Officer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Human resources director"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Engine driver"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Geodesist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Scientific specialist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Geologist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Driver"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Cleaner"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Street cleaner"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Waiter"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Tender specialist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Analyst"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Art director"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Designer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Game designer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Network engineer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Product manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Programmer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Project manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="System administrator"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Technical support specialist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Tester"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Journalist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Producer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Videographer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Copywriter"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="PR manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Promoter"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="SMM manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Nurse"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Pharmacist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Physician"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Veterinarian"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Medical representative"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Educator"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Teacher"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Electrician"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Quality engineer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Welder"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Merchandiser"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Agronomist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Massage therapist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Nail technician"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Fitness trainer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Hairdresser"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Assessor"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Insurance agent"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Architect"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Dispatcher"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Warehouse worker"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Hostess"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Tourism manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Restaurant manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="HR specialist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Business coach"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Economist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Financial manager"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Lawyer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Legal counsel"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Animator"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Artist"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Loader"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Packer"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Cook"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Doctor"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Firefighter"/>
+        </insert>
+
+        <insert tableName="area_of_activity">
+            <column name="activity" value="Other"/>
+        </insert>
+
+    </changeSet>
+
+
+</databaseChangeLog>

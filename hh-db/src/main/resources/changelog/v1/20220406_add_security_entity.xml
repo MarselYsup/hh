@@ -1,0 +1,34 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="Yusupov Marsel" id="001">
+        <createTable tableName="refresh_token">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="expired_time" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Yusupov Marsel" id="002">
+        <addColumn tableName="user_account">
+            <column name="token_id" position="8" type="uuid"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="Yusupov Marsel" id="003">
+        <addForeignKeyConstraint baseTableName="user_account"
+                                 baseColumnNames="token_id"
+                                 constraintName="fk_token_user"
+                                 referencedTableName="refresh_token"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>

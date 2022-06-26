@@ -1,0 +1,382 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="Gusev Fedor" id="001">
+
+        <insert tableName="skill">
+            <column name="skill" value="Effective communication"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Teamwork"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Creativity"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Problem-solving"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Leadership"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Extroversion"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="People skills"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Openness"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Adaptability"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Reporting"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Auditor's certificate"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="1C"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="SUN"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="CMS"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="MS Office"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Adobe Photoshop"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="English language"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Skills negotiation"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Skills management"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Car availability"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Driving"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Experience"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Non-conflict stress"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Tolerance working with databases"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Office"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Equipment skills e-mail"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Skills planning"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Responsibility"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Critical thinking"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Time-management"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Creative thinking"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Ability to negotiate"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Communication skills"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Competent speech"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Delivered voice"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Necessary diction"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Listening ability"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Learnability"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Tact"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Tolerance"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Confident use of a PC"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Interest"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Friendliness"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Motivation"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Energy"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Initiative"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Technical English"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Executive sociability"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Commitment"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Java core"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Git"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="SQL"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="OOP"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="HTML"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Spring framework"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="CSS"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="PostgreSQL"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="JDBC"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="PHP"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Apache Tomcat"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Python"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Fast API"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Django"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value=".NET framework"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Mongo DB"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Analytical thinking"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Competent planning"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Knowledge of legislation"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="The ability to draw up documents"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Paperwork"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="blind printing"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Public speaking"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="The ability to convince"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Loyalty"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Attention to detail"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Business leadership"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Sales"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Management personnel management"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Attracting customers"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Active sales"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Negotiating"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Sales analytics"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Organizational skills"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Merchandising"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Broad-minded"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Erudition"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Software development"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Diagnostics of failures and malfunctions"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Reporting skills"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Strategic thinking"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Ability to prioritize"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Self-awareness"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="skill" value="Business correspondence skills"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

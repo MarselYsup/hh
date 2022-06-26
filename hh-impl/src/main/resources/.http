@@ -1,0 +1,6 @@
+GET http://localhost:8080/files/resource
+Content-Type: application/json
+
+{
+  "id": "90084ca7-2907-4b2b-a295-f52de2a4d018"
+}

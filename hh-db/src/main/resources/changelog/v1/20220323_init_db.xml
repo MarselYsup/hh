@@ -1,0 +1,389 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <changeSet id="001" author="Fedor Gusev">
+        <createTable tableName="user_account">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="role" type="VARCHAR(255)"/>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="status" type="VARCHAR(20)"/>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="002" author="Fedor Gusev">
+        <createTable tableName="employee">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="first_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_of_birth" type="TIMESTAMP"/>
+            <column name="phone_number" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gender" type="VARCHAR(20)"/>
+            <column name="city" type="VARCHAR(255)"/>
+            <column name="user_id" type="uuid"/>
+            <column name="avatar_id" type="uuid"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="003" author="Fedor Gusev">
+        <createTable tableName="file_info">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="mime_type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="original_file_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="size" type="BIGINT"/>
+            <column name="image_id" type="uuid"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="004" author="Fedor Gusev">
+        <createTable tableName="resume">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="employee_id" type="uuid"/>
+            <column name="education_id" type="uuid"/>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="experience" type="VARCHAR(255)"/>
+            <column name="employment_type" type="VARCHAR(255)"/>
+            <column name="salary" type="INTEGER"/>
+            <column name="information" type="TEXT"/>
+            <column name="activity_id" type="uuid"/>
+            </createTable>
+    </changeSet>
+
+    <changeSet id="005" author="Fedor Gusev">
+        <createTable tableName="area_of_activity">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="activity" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="006" author="Fedor Gusev">
+        <createTable tableName="education_detail">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="university_name" type="VARCHAR(255)"/>
+            <column name="institute_name" type="VARCHAR(255)"/>
+            <column name="major" type="VARCHAR(255)"/>
+            <column name="starting_date" type="TIMESTAMP"/>
+            <column name="completion_date" type="TIMESTAMP"/>
+            <column name="level" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="007" author="Fedor Gusev">
+        <createTable tableName="portfolio">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="file_id" type="uuid"/>
+            <column name="resume_id" type="uuid"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="008" author="Fedor Gusev">
+        <createTable tableName="skill">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="skill" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="009" author="Fedor Gusev">
+        <createTable tableName="resume_skill">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="skill_id" type="uuid"/>
+            <column name="resume_id" type="uuid"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="010" author="Fedor Gusev">
+        <createTable tableName="view_resume">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="resume_id" type="uuid"/>
+            <column name="user_id" type="uuid"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="011" author="Yusupov Marsel">
+        <createTable tableName="company">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="profile_description" type="TEXT"/>
+            <column name="website_url" type="VARCHAR(500)"/>
+
+            <column name="user_id" type="uuid"/>
+            <column name="avatar_id" type="uuid"/>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="012" author="Yusupov Marsel">
+        <createTable tableName="vacancy">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="min_salary" type="INTEGER"/>
+            <column name="max_salary" type="INTEGER"/>
+            <column name="experience" type="VARCHAR(255)"/>
+            <column name="employment_type" type="VARCHAR(255)"/>
+
+            <column name="company_id" type="uuid"/>
+            <column name="activity_id" type="uuid"/>
+            <column name="location_id" type="uuid"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="013" author="Yusupov Marsel">
+        <createTable tableName="view_vacancy">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="vacancy_id" type="uuid"/>
+            <column name="user_id" type="uuid"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="014" author="Yusupov Marsel">
+        <createTable tableName="location">
+            <column name="id" type="uuid"
+                    defaultValueComputed="md5(random()::text || clock_timestamp()::text)::uuid">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="updated_date" type="TIMESTAMP WITHOUT TIME ZONE" defaultValueComputed="NOW()"/>
+            <column name="latitude" type="numeric(10,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="numeric(10,2)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="015" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="employee"
+                                 baseColumnNames="user_id"
+                                 constraintName="fk_user_employee"
+                                 referencedTableName="user_account"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="016" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="employee"
+                                 baseColumnNames="avatar_id"
+                                 constraintName="fk_avatar_employee"
+                                 referencedTableName="file_info"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="017" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="resume"
+                                 baseColumnNames="employee_id"
+                                 constraintName="fk_employee_resume"
+                                 referencedTableName="employee"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="018" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="resume"
+                                 baseColumnNames="education_id"
+                                 constraintName="fk_education_resume"
+                                 referencedTableName="education_detail"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="019" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="resume"
+                                 baseColumnNames="activity_id"
+                                 constraintName="fk_activity_resume"
+                                 referencedTableName="area_of_activity"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="020" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="resume_skill"
+                                 baseColumnNames="resume_id"
+                                 constraintName="fk_resume_for_skill"
+                                 referencedTableName="resume"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="021" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="resume_skill"
+                                 baseColumnNames="skill_id"
+                                 constraintName="fk_skill_for_resume"
+                                 referencedTableName="skill"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="022" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="portfolio"
+                                 baseColumnNames="file_id"
+                                 constraintName="fk_file_portfolio"
+                                 referencedTableName="file_info"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="023" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="portfolio"
+                                 baseColumnNames="resume_id"
+                                 constraintName="fk_resume_portfolio"
+                                 referencedTableName="resume"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="024" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="view_resume"
+                                 baseColumnNames="resume_id"
+                                 constraintName="fk_resume_view"
+                                 referencedTableName="resume"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="025" author="Fedor Gusev">
+        <addForeignKeyConstraint baseTableName="view_resume"
+                                 baseColumnNames="user_id"
+                                 constraintName="fk_user_portfolio"
+                                 referencedTableName="user_account"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="026" author="Yusupov Marsel">
+        <addForeignKeyConstraint baseTableName="company"
+                                 baseColumnNames="user_id"
+                                 constraintName="fk_user_company"
+                                 referencedTableName="user_account"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="027" author="Yusupov Marsel">
+        <addForeignKeyConstraint baseTableName="company"
+                                 baseColumnNames="avatar_id"
+                                 constraintName="fk_avatar_company"
+                                 referencedTableName="file_info"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="028" author="Yusupov Marsel">
+        <addForeignKeyConstraint baseTableName="vacancy"
+                                 baseColumnNames="company_id"
+                                 constraintName="fk_company_vacancy"
+                                 referencedTableName="company"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="029" author="Yusupov Marsel">
+        <addForeignKeyConstraint baseTableName="vacancy"
+                                 baseColumnNames="activity_id"
+                                 constraintName="fk_activity_vacancy"
+                                 referencedTableName="area_of_activity"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="030" author="Yusupov Marsel">
+        <addForeignKeyConstraint baseTableName="vacancy"
+                                 baseColumnNames="location_id"
+                                 constraintName="fk_location_vacancy"
+                                 referencedTableName="location"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="031" author="Yusupov Marsel">
+        <addForeignKeyConstraint baseTableName="view_vacancy"
+                                 baseColumnNames="user_id"
+                                 constraintName="fk_user_for_vacancy"
+                                 referencedTableName="user_account"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="032" author="Yusupov Marsel">
+        <addForeignKeyConstraint baseTableName="view_vacancy"
+                                 baseColumnNames="vacancy_id"
+                                 constraintName="fk_vacancy_for_user"
+                                 referencedTableName="vacancy"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+
+
+</databaseChangeLog>

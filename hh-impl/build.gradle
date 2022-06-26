@@ -1,0 +1,56 @@
+war.archiveFileName = "${project.name}.war"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.liquibase:liquibase-core:3.10.3'
+    implementation 'org.springframework.data:spring-data-jpa:2.6.2'
+    implementation 'org.hibernate:hibernate-core:5.6.5.Final'
+    implementation 'org.mapstruct:mapstruct:1.3.1.Final'
+    implementation 'org.mongodb:mongo-java-driver:3.12.10'
+    implementation 'org.mongodb:bson:4.5.0'
+    implementation 'org.springframework.data:spring-data-mongodb:3.3.2'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2'
+
+    implementation 'org.springframework.security:spring-security-web:5.6.2'
+    implementation 'org.springframework.security:spring-security-config:5.6.2'
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+    implementation 'org.freemarker:freemarker:2.3.31'
+
+    implementation 'com.sun.activation:javax.activation:1.2.0'
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+
+    implementation 'org.apache.poi:poi-ooxml:5.2.2'
+
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.8'
+
+    implementation project(':hh-api')
+    implementation project(':hh-db')
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.3.1.Final'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs += [
+                    project(":hh-db").sourceSets.main.resources
+            ]
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileJava {
+    options.compilerArgs = [
+            '-Amapstruct.defaultComponentModel=spring'
+    ]
+}
